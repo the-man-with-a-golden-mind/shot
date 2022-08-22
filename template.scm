@@ -1,4 +1,4 @@
-(define-library (templates template)
+(define-library (shot template)
   (import (owl string))
   (import (scheme core))
   (import (owl list))
