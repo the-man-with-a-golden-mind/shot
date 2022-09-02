@@ -49,13 +49,22 @@
                                   (html-param (car param) (car (cdr param))))
                                 params)))
                 (fold string-append "" mapped-params))))
+      
+    (define (render-content content)
+     (cond 
+      ((string? content) content)
+      ((function? content) (content))
+      ((list? content) (fold string-append "" content))
+      (else 
+        content
+       )))
 
     (define (n elem-name params content)
       (string-append "<"
                      elem-name
                      (html-params params)
                      ">"
-                     content
+                     (render-content content)
                      "</"
                      elem-name
                      ">"))
