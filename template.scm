@@ -9,6 +9,7 @@
           DIV
           SPAN
           I
+          BODY
           P
           BR
           NAV
@@ -70,6 +71,9 @@
                      "</"
                      elem-name
                      ">"))
+    (define (BODY params content)
+      (n "BODY" params content))
+
     (define (HEAD params content)
       (n "HEAD" params content))
 
