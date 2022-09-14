@@ -20,6 +20,8 @@
           DT
           HR
           OL
+          LINK
+          HEAD
           UL
           B
           SVG
@@ -68,6 +70,11 @@
                      "</"
                      elem-name
                      ">"))
+    (define (HEAD params content)
+      (n "HEAD" params content))
+
+    (define (LINK params content)
+     (n "LINK" params content))
 
     (define (H1 params content)
       (n "h1" params content))
